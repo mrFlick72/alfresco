@@ -1,10 +1,9 @@
 FROM centos:7
+MAINTAINER Valerio Vaudi
 
-RUN yum update -y
 RUN yum install -y wget
-RUN wget https://download.alfresco.com/release/community/4.2.f-build-00012/alfresco-community-4.2.f-installer-linux-x64.bin
-RUN chmod a+x alfresco-community-4.2.f-installer-linux-x64.bin && \
- ./alfresco-community-4.2.f-installer-linux-x64.bin \
+RUN wget https://download.alfresco.com/release/community/4.2.f-build-00012/alfresco-community-4.2.f-installer-linux-x64.bin && chmod a+x alfresco-community-4.2.f-installer-linux-x64.bin
+RUN ./alfresco-community-4.2.f-installer-linux-x64.bin \
     --mode unattended \
     --installer-language en \
     --jdbc_url jdbc:postgresql://localhost/alfresco \
