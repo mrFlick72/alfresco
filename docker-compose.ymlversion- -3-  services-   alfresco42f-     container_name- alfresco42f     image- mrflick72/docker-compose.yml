@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  alfresco42f:
+    container_name: alfresco42f
+    image: mrflick72/alfresco:42f
+    ports:
+      - 8080:8080
