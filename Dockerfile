@@ -22,7 +22,8 @@ RUN chmod a+x alfresco-community-4.2.f-installer-linux-x64.bin && \
     --alfresco_rmi_port 50500 \
     --alfresco_admin_password admin \
     --alfresco_sharepoint_port 7070 \
-    --libreoffice_port 8100
+    --libreoffice_port 8100 && \
+    rm alfresco-community-4.2.f-installer-linux-x64.bin
 
 EXPOSE 8080
 
